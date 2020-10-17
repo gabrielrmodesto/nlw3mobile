@@ -1,16 +1,23 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
-import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import React from "react";
+import {
+	View,
+	Text,
+	StyleSheet,
+	TouchableOpacity,
+	Dimensions,
+} from "react-native";
+import MapView, { Callout, Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import mapMarker from "../images/map-marker.png";
-import { Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { Feather } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
-export default function OrphanagesMap(){
+export default function OrphanagesMap() {
 	const navigation = useNavigation();
-	function handleNavigateToOrphanageDetails(){
-		navigation.navigate('OrphanageDetails');
+	function handleNavigateToOrphanageDetails() {
+		navigation.navigate("OrphanageDetails");
 	}
-	<View style={styles.container}>
+	return (
+		<View style={styles.container}>
 			<MapView
 				provider={PROVIDER_GOOGLE}
 				style={styles.container}
@@ -40,14 +47,12 @@ export default function OrphanagesMap(){
 			</MapView>
 			<View style={styles.footer}>
 				<Text style={styles.footerText}>2 orfanatos encontrados</Text>
-				<TouchableOpacity
-					style={styles.createOrphanageButton}
-
-				>
+				<TouchableOpacity style={styles.createOrphanageButton}>
 					<Feather name="plus" color="#fff" size={20} />
 				</TouchableOpacity>
 			</View>
 		</View>
+	);
 }
 const styles = StyleSheet.create({
 	container: {
@@ -66,7 +71,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	calloutText: {
-		fontFamily: 'Nunito_700Bold',
+		fontFamily: "Nunito_700Bold",
 		color: "#0089a5",
 		fontSize: 14,
 	},
@@ -85,7 +90,7 @@ const styles = StyleSheet.create({
 		elevation: 3,
 	},
 	footerText: {
-		fontFamily: 'Nunito_700Bold',
+		fontFamily: "Nunito_700Bold",
 		color: "#8fa7b3",
 	},
 	createOrphanageButton: {

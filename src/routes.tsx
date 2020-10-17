@@ -5,8 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const { Navigator, Screen } = createStackNavigator();
 
-import OrphanagesMap from './pages/OrphanagesMap';
-import OrphanageDetails from './pages/OrphanageDetails';
+import OrphanageDetails from "./pages/OrphanageDetails";
+import OrphanagesMap from "./pages/OrphanagesMap";
 
 const Routes: React.FC = () => {
 	return (
@@ -17,6 +17,6 @@ const Routes: React.FC = () => {
 			</Navigator>
 		</NavigationContainer>
 	);
-}
+};
 
 export default Routes;
