@@ -164,7 +164,7 @@ export default function OrphanageDetails() {
 									styles.scheduleTextRed,
 								]}
 							>
-								Não Atendemos fim de semana
+								Não atendemos fim de semana
 							</Text>
 						</View>
 					)}
